@@ -7,7 +7,7 @@
 #include <cstdlib>
 
 AdaptiveExpressions_BuiltinFunctions::Subtract::Subtract() : 
-    ExpressionEvaluatorWithArgs(ExpressionType::Subtract, (ReturnType)((int)ReturnType::String | (int)ReturnType::Number))
+    ExpressionEvaluatorForSequenceOperator(ExpressionType::Subtract, (ReturnType)((int)ReturnType::String | (int)ReturnType::Number))
 {
 }
 

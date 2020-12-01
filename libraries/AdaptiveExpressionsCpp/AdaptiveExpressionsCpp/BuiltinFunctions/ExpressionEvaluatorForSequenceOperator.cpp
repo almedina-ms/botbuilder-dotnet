@@ -1,16 +1,16 @@
 #pragma once
-#include "../Code/ExpressionEvaluatorWithArgs.h"
+#include "ExpressionEvaluatorForSequenceOperator.h"
 #include "../Code/FunctionUtils.h"
 
 namespace AdaptiveExpressions_BuiltinFunctions
 {
-    ValueErrorTuple ExpressionEvaluatorWithArgs::TryEvaluate(Expression* expression, void* state, Options* options)
+    ValueErrorTuple ExpressionEvaluatorForSequenceOperator::TryEvaluate(Expression* expression, void* state, Options* options)
     {
         return ApplyWithError(expression, state, options);
     }
 
 
-    ValueErrorTuple ExpressionEvaluatorWithArgs::ApplyWithError(Expression* expression, void* state, Options* options)
+    ValueErrorTuple ExpressionEvaluatorForSequenceOperator::ApplyWithError(Expression* expression, void* state, Options* options)
     {
         std::any value;
         std::string error;
@@ -38,7 +38,7 @@ namespace AdaptiveExpressions_BuiltinFunctions
         return ValueErrorTuple(value, error);
     }
 
-    ValueErrorTuple ExpressionEvaluatorWithArgs::ApplySequenceWithError(std::vector<std::any> args, void* verify)
+    ValueErrorTuple ExpressionEvaluatorForSequenceOperator::ApplySequenceWithError(std::vector<std::any> args, void* verify)
     {
         std::vector<std::any> binaryArgs(2);
         std::any sofar = args[0];

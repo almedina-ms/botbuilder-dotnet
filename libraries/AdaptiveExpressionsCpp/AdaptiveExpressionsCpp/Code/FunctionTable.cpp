@@ -4,6 +4,8 @@
 #include "../BuiltinFunctions/And.h"
 #include "../BuiltinFunctions/Or.h"
 #include "../BuiltinFunctions/Not.h"
+#include "../BuiltinFunctions/Ceiling.h"
+#include "../BuiltinFunctions/Floor.h"
 
 FunctionTable::FunctionTable() : std::map<std::string, ExpressionEvaluator*>()
 {
@@ -17,7 +19,9 @@ void FunctionTable::PopulateStandardFunctions()
     this->insert(std::pair<std::string, ExpressionEvaluator*>("+", new AdaptiveExpressions_BuiltinFunctions::Add()));
     this->insert(std::pair<std::string, ExpressionEvaluator*>("subtract", new AdaptiveExpressions_BuiltinFunctions::Subtract()));
     this->insert(std::pair<std::string, ExpressionEvaluator*>("-", new AdaptiveExpressions_BuiltinFunctions::Subtract()));
-
+    this->insert(std::pair<std::string, ExpressionEvaluator*>("Ceiling", new AdaptiveExpressions_BuiltinFunctions::Ceiling()));
+    this->insert(std::pair<std::string, ExpressionEvaluator*>("Floor", new AdaptiveExpressions_BuiltinFunctions::Floor()));
+    
     // Logic
     this->insert(std::pair<std::string, ExpressionEvaluator*>("and", new AdaptiveExpressions_BuiltinFunctions::And()));
     this->insert(std::pair<std::string, ExpressionEvaluator*>("&&", new AdaptiveExpressions_BuiltinFunctions::And()));

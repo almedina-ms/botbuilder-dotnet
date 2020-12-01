@@ -215,13 +215,15 @@
     <ClInclude Include="..\antlr4-runtime\WritableToken.h" />
     <ClInclude Include="..\BuiltinFunctions\Add.h" />
     <ClInclude Include="..\BuiltinFunctions\And.h" />
+    <ClInclude Include="..\BuiltinFunctions\Ceiling.h" />
+    <ClInclude Include="..\BuiltinFunctions\ExpressionEvaluatorForSequenceOperator.h" />
+    <ClInclude Include="..\BuiltinFunctions\Floor.h" />
     <ClInclude Include="..\BuiltinFunctions\Not.h" />
     <ClInclude Include="..\BuiltinFunctions\Or.h" />
     <ClInclude Include="..\BuiltinFunctions\Subtract.h" />
     <ClInclude Include="..\Code\Constant.h" />
     <ClInclude Include="..\Code\Expression.h" />
     <ClInclude Include="..\Code\ExpressionEvaluator.h" />
-    <ClInclude Include="..\Code\ExpressionEvaluatorWithArgs.h" />
     <ClInclude Include="..\Code\ExpressionFunctions.h" />
     <ClInclude Include="..\Code\ExpressionParser.h" />
     <ClInclude Include="..\Code\ExpressionType.h" />
@@ -238,13 +240,15 @@
   <ItemGroup>
     <ClCompile Include="..\BuiltinFunctions\Add.cpp" />
     <ClCompile Include="..\BuiltinFunctions\And.cpp" />
+    <ClCompile Include="..\BuiltinFunctions\Ceiling.cpp" />
+    <ClCompile Include="..\BuiltinFunctions\ExpressionEvaluatorForSequenceOperator.cpp" />
+    <ClCompile Include="..\BuiltinFunctions\Floor.cpp" />
     <ClCompile Include="..\BuiltinFunctions\Not.cpp" />
     <ClCompile Include="..\BuiltinFunctions\Or.cpp" />
     <ClCompile Include="..\BuiltinFunctions\Subtract.cpp" />
     <ClCompile Include="..\Code\Constant.cpp" />
     <ClCompile Include="..\Code\Expression.cpp" />
     <ClCompile Include="..\Code\ExpressionEvaluator.cpp" />
-    <ClCompile Include="..\Code\ExpressionEvaluatorWithArgs.cpp" />
     <ClCompile Include="..\Code\ExpressionFunctions.cpp" />
     <ClCompile Include="..\Code\ExpressionParser.cpp" />
     <ClCompile Include="..\Code\ExpressionType.cpp" />

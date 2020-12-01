@@ -3,10 +3,10 @@
 
 namespace AdaptiveExpressions_BuiltinFunctions
 {
-    class ExpressionEvaluatorWithArgs : public ExpressionEvaluator
+    class ExpressionEvaluatorForSequenceOperator : public ExpressionEvaluator
     {
     public:
-        ExpressionEvaluatorWithArgs(std::string type, ReturnType returnType) : ExpressionEvaluator(type, returnType) {}
+        ExpressionEvaluatorForSequenceOperator(std::string type, ReturnType returnType) : ExpressionEvaluator(type, returnType) {}
 
         virtual ValueErrorTuple TryEvaluate(Expression* expression, void* state, Options* options) override;
 
