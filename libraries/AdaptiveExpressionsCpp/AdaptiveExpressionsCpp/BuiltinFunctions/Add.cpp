@@ -7,7 +7,7 @@
 #include <cstdlib>
 
 AdaptiveExpressions_BuiltinFunctions::Add::Add() : 
-    ExpressionEvaluatorWithArgs(ExpressionType::Add, (ReturnType)((int)ReturnType::String | (int)ReturnType::Number))
+    ExpressionEvaluatorForSequenceOperator(ExpressionType::Add, (ReturnType)((int)ReturnType::String | (int)ReturnType::Number))
 {
 }
 

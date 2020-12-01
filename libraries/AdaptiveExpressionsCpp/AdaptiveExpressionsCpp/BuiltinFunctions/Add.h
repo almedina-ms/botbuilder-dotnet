@@ -1,9 +1,9 @@
 #pragma once
-#include "../Code/ExpressionEvaluatorWithArgs.h"
+#include "ExpressionEvaluatorForSequenceOperator.h"
 
 namespace AdaptiveExpressions_BuiltinFunctions
 {
-    class Add : public ExpressionEvaluatorWithArgs
+    class Add : public ExpressionEvaluatorForSequenceOperator
     {
     public:
         Add();

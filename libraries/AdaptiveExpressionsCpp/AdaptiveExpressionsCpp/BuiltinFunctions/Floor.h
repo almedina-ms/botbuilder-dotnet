@@ -1,13 +1,14 @@
 #pragma once
-#include "../Code/ExpressionEvaluator.h"
+#include "..\Code\ExpressionEvaluator.h"
 
 namespace AdaptiveExpressions_BuiltinFunctions
 {
-    class Not : public ExpressionEvaluator
+    class Floor : public ExpressionEvaluator
     {
     public:
-        Not();
+        Floor();
         void ValidateExpression(Expression* expression);
         virtual ValueErrorTuple TryEvaluate(Expression* expression, void* state, Options* options) override;
+
     };
 }

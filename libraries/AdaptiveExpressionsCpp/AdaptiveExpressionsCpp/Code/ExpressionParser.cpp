@@ -168,22 +168,6 @@ antlrcpp::Any ExpressionParser::ExpressionTransformer::visitNumericAtom(Expressi
 
     try
     {
-        int integer = std::stoi(numericString);
-        return Expression::ConstantExpression(integer);
-    }
-    catch (const std::bad_any_cast&)
-    {
-    }
-
-    try
-    {
-        long long int longInteger = std::stol(numericString);
-        return Expression::ConstantExpression(longInteger);
-    }
-    catch (const std::bad_any_cast&) {}
-
-    try
-    {
         double decimalValue = std::stod(numericString);
         return Expression::ConstantExpression(decimalValue);
     }

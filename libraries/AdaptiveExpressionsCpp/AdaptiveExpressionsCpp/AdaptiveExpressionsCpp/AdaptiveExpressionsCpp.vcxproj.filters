@@ -192,9 +192,6 @@
     <ClInclude Include="..\Code\ExpressionEvaluator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Code\ExpressionEvaluatorWithArgs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\Code\ExpressionFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -220,6 +217,15 @@
       <Filter>BuiltinFunctions</Filter>
     </ClInclude>
     <ClInclude Include="..\BuiltinFunctions\Not.h">
+      <Filter>BuiltinFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BuiltinFunctions\Ceiling.h">
+      <Filter>BuiltinFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BuiltinFunctions\ExpressionEvaluatorForSequenceOperator.h">
+      <Filter>BuiltinFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BuiltinFunctions\Floor.h">
       <Filter>BuiltinFunctions</Filter>
     </ClInclude>
   </ItemGroup>
@@ -257,9 +263,6 @@
     <ClCompile Include="..\Code\ExpressionEvaluator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Code\ExpressionEvaluatorWithArgs.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\Code\ExpressionFunctions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -279,6 +282,15 @@
       <Filter>BuiltinFunctions</Filter>
     </ClCompile>
     <ClCompile Include="..\BuiltinFunctions\Not.cpp">
+      <Filter>BuiltinFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BuiltinFunctions\Ceiling.cpp">
+      <Filter>BuiltinFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BuiltinFunctions\ExpressionEvaluatorForSequenceOperator.cpp">
+      <Filter>BuiltinFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\BuiltinFunctions\Floor.cpp">
       <Filter>BuiltinFunctions</Filter>
     </ClCompile>
   </ItemGroup>

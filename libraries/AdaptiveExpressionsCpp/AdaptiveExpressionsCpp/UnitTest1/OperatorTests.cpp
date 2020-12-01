@@ -19,12 +19,21 @@ namespace OperatorTests
             return parsed->TryEvaluate(nullptr);
         }
 
-        void MathTest(std::string expression, int expectedValue)
+        void MathTest(std::string expression, double expectedValue)
         {
             ValueErrorTuple valueAndError = ParseAndEvaluate(expression);
 
-            bool cast{};
-            Assert::AreEqual(expectedValue, FunctionUtils::castToType<int>(valueAndError.first, cast));
+            bool castSuccess{};
+            int intResult = FunctionUtils::castToType<int>(valueAndError.first, castSuccess);
+            if (castSuccess)
+            {
+                Assert::AreEqual(expectedValue, (double) intResult);
+            }
+            else
+            {
+                Assert::AreEqual(expectedValue, FunctionUtils::castToType<double>(valueAndError.first, castSuccess));
+
+            }
 
             std::cout << "Error " << valueAndError.second << std::endl;
         }
@@ -42,22 +51,37 @@ namespace OperatorTests
         TEST_METHOD(ConstantNumberTest)
         {
             MathTest("5", 5);
+            MathTest("5.3", 5.3);
         }
 
         TEST_METHOD(AddTest)
         {
             MathTest("1 + 2", 3);
             MathTest("1 + 2 + 3", 6);
+            MathTest("1.2 + 3.6", 4.8);
             MathTest("add(1, 2)", 3);
             MathTest("add(1, 2, 3)", 6);
+            MathTest("add(1.2, 3.6)", 4.8);
         }
 
         TEST_METHOD(SubtractTest)
         {
             MathTest("5 - 3", 2);
             MathTest("5 - 3 - 1", 1);
+            MathTest("5.5 - 3.2", 2.3);
             MathTest("subtract(20, 4)", 16);
             MathTest("subtract(20, 4, 1)", 15);
+            MathTest("subtract(5.5, 3.2", 2.3);
+        }
+
+        TEST_METHOD(CeilingTest)
+        {
+            MathTest("Ceiling(2.3)", 3);
+        }
+
+        TEST_METHOD(FloorTest)
+        {
+            MathTest("Floor(2.3)", 2);
         }
 
         TEST_METHOD(ConstantBooleanTest)
